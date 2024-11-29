@@ -178,7 +178,7 @@ function App() {
             <Routes>
               <Route path='/lock' element={<LiquidityTokenLoker />} />
               <Route
-                path='*'
+                path='/home'
                 element={
                   <Typography
                     variant='h4'
@@ -192,6 +192,7 @@ function App() {
                   </Typography>
                 }
               />
+              <Route path='*' element={<LiquidityTokenLoker />} />
             </Routes>
           </Box>
         </Box>
