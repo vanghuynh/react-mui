@@ -12,6 +12,12 @@ const theme = createTheme({
   typography: {
     fontFamily: "'Poppins', sans-serif",
     button: { textTransform: 'none', fontWeight: 500 },
+    h6: {
+      fontSize: '1.25rem',
+      '@media (max-width:600px)': {
+        fontSize: '1rem',
+      },
+    },
   },
   components: {
     MuiTabs: {

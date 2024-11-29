@@ -101,7 +101,15 @@ const TokenLocker = () => {
             </Grid>
             <Grid item xs={6}>
               <Typography variant='subtitle1'>Unlock Time:</Typography>
-              <Typography>0</Typography>
+              <Typography color='error'>0</Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant='subtitle1'>PFee:</Typography>
+              <Typography color='error'>0 coin</Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant='subtitle1'>Token:</Typography>
+              <Typography color='error'>()</Typography>
             </Grid>
           </Grid>
         </CardContent>

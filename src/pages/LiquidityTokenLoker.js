@@ -8,9 +8,9 @@ const LiquidityTokenLoker = () => {
     setActiveTab(newValue);
   };
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ px: { sm: 1, md: 4 }, py: { sm: 4, md: 4 } }}>
       {/* Page Title */}
-      <Typography variant='h4' sx={{ mb: 4 }}>
+      <Typography variant='h4' sx={{ mb: 4, mt: 8 }}>
         Token & Liquidity Locker
       </Typography>
 
@@ -23,13 +23,13 @@ const LiquidityTokenLoker = () => {
         centered
         sx={{ mb: 4 }}
       >
-        <Tab label='Liquidity Locker' />
         <Tab label='Token Locker' />
+        <Tab label='Liquidity Locker' />
       </Tabs>
 
       {/* Tab Content */}
-      {activeTab === 0 && <LiquidityLocker />}
-      {activeTab === 1 && <TokenLocker />}
+      {activeTab === 0 && <TokenLocker />}
+      {activeTab === 1 && <LiquidityLocker />}
     </Box>
   );
 };

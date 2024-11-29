@@ -5,14 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material';
 import theme from './theme';
+import { Web3ReactProvider } from '@web3-react/core';
+import { ethers } from 'ethers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const getLibrary = (provider) => {
+  const library = new ethers.providers.Web3Provider(provider);
+  return library;
+};
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Web3ReactProvider>
   </React.StrictMode>
 );
 
